@@ -1,28 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-	int height = 7;
-	int width = 5;
+	char name[20];
+	char Dob[20];
+	int mobile;
+	printf("enter your name:");
+	scanf("%s" , name);
 	
-	 int perimeter = 2*(height+width);
-	 int area = height*width;
-	 
-	 printf ("the perimeter is %d inches\n", perimeter);
-	 printf("the area is %d square inches\n", area);
-	 
+	printf("enter your Dob:");
+	scanf("%s" , Dob);
 	
+	printf("enter your phone number");
+	scanf("%d" , &mobile);
 	
+	printf("Name :%s \n", name);
 	
+	printf("DOB :%s \n", Dob);
 	
-	
-	
-	
-	
-	
-	
-		return 0;
-}	
-/* Perimeter=2×(Height+Width)
-Area=Height×Width
-*/
+	printf("phone number :%d \n", mobile);
+	return 0;
+}

@@ -3,24 +3,19 @@
 
 int main()
 {
-	int number;
+	int user1;
+	int user2;
 	
-	printf("enter the whole \n");
-	scanf("%d", &number);
-  
-if (number < 0 )
-{
-printf("The number is negative.\n");	
-}
-else if (number > 0)	
-{
-	printf("The number is positive.\n");
-}
-else if (number == 0)
-{
-	printf("The number is equal to zero.\n");
-}
-
+	printf("enter the first product : ");
+	scanf("%d", &user1);
+	
+	printf("enter the second product : ");
+	scanf("%d", &user2);
+	
+	int sum = user1*user2;
+	
+	printf("product of two integer %d\n", sum);
+	
 	
 	return 0;
 }

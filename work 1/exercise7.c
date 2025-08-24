@@ -3,19 +3,24 @@
 
 int main()
 {
-	int user1;
-	int user2;
 	
-	printf("enter the first product : ");
-	scanf("%d", &user1);
+	int radius;
+	int pi = 3.1416;
 	
-	printf("enter the second product : ");
-	scanf("%d", &user2);
+	printf(" enter the radius of the circle\n");
+	scanf("%d", &pi);
 	
-	int sum = user1*user2;
+	float perimeter = 2*3.1416*pi;
+	float area = 3.1416*pi*pi;
 	
-	printf("product of two integer %d\n", sum);
+	printf ("the perimeter is %f\n", perimeter);
+	printf ("the area is %f\n", area);
 	
 	
 	return 0;
 }
+/*
+Perimeter=2×π×6=2×3.1416×6=37.6992 inches
+Area=π×6^2 =3.1416×36=113.0976 square inches
+*/
+

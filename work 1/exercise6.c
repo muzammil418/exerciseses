@@ -1,21 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-	int user1;
-	int user2;
+	int height = 7;
+	int width = 5;
 	
-	printf("enter the first integer : ");
-	scanf("%d", &user1);
-	
-	printf("enter the second integer : ");
-	scanf("%d", &user2);
-	
-	int sum = user1+user2;
-	
-	printf("sum of the integer %d\n", sum);
+	 int perimeter = 2*(height+width);
+	 int area = height*width;
+	 
+	 printf ("the perimeter is %d inches\n", perimeter);
+	 printf("the area is %d square inches\n", area);
+	 
 	
 	
-	return 0;
-}
+	
+	
+	
+	
+	
+	
+	
+	
+		return 0;
+}	
+/* Perimeter=2×(Height+Width)
+Area=Height×Width
+*/

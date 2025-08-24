@@ -3,38 +3,19 @@
 
 int main()
 {
-	float user1,user2;
-	char oppy;
+	int user1;
+	int user2;
 	
-	printf("enter the first number : ");
-	scanf("%f", &user1);
+	printf("enter the first integer : ");
+	scanf("%d", &user1);
 	
-	printf("enter the operator ( +, -, *, /)");
-	scanf(" %c", &oppy);
+	printf("enter the second integer : ");
+	scanf("%d", &user2);
 	
-	printf("enter the second number : ");
-	scanf("%f", &user2);
+	int sum = user1+user2;
 	
-	if (oppy == '+') 
-	{	
-	printf("The sum is: %f\n", user1 + user2);
-	}
-	else if  (oppy == '-')
-	{
-		printf("the subraction is : %f\n", user1 - user2);
-	}
-	else if (oppy == '*')
-	{
-		printf("the product is : %f\n", user1 * user2);
-	}
-	else if (oppy == '/')
-	{
-		printf("the division is : %f\n", user1 / user2);
-	}
+	printf("sum of the integer %d\n", sum);
+	
 	
 	return 0;
-
-
-
-	
 }
