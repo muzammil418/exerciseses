@@ -1,0 +1,182 @@
+Programming Challenge: 1
+Dated: 29th of July, 2025
+=========================
+0. Read all the rules below
+1. The output on cmd must match the Expected Output exactly.
+2. All programs should start with a comment of program description.
+3. The final source code (C files) should be submitted by email.
+
+----------------------------------------------------------
+
+11. Convert days to years, months, days
+
+Write a C program to convert a given integer (in days) to years, months and days, assuming that all months have 30 days and all years have 365 days.
+
+Test Data :
+Input no. of days: 2535
+
+Expected Output:
+6 Year(s)
+11 Month(s)
+15 Day(s)
+
+----------------------------------------------------------
+
+12. Calculate average weight for purchases
+
+Write a C program that accepts the price and weight (in kg) of two difference fruits and then calculate the total bill.
+
+Hint: A person can buy 2.5 kg of fruit.
+
+Test Data :
+Fruit 1 price/kg: 15
+Fruit 1 kgs to buy: 5
+Fruit 2 price/kg: 25
+Fruit 2 kgs to buy: 4
+
+Expected Output:
+Total price of fruits = 175
+
+----------------------------------------------------------
+
+13. Print employee ID and monthly salary
+
+Write a C program that accepts an employee's ID, total worked hours in a month and the amount he received per hour. Print the ID and salary (with two decimal places) of the employee for a particular month.
+
+Hint: Two only print 2 decimal places use %.2f as placeholder instead of %f. printf will take care of the formatting
+
+Test Data :
+Input the Employees ID(Max. 10 chars): 0342
+Input the working hrs: 8
+Salary amount/hr: 15000
+
+Expected Output:
+Employees ID = 0342
+Salary = U$ 120000.00 
+
+----------------------------------------------------------
+
+14. Find the minimum of two integers
+
+Write a C program that accepts two integers as input and finds the minimum of the two.
+
+Test Data :
+Input the first integer: 5
+Input the second integer: 8
+
+
+Expected Output:
+Minimum value of the two integers: 5
+
+----------------------------------------------------------
+
+15. Find the maximum of three integers
+
+Write a C program that accepts three integers as input and finds the maximum of three.
+
+Test Data :
+Input the first integer: 25
+Input the second integer: 35
+Input the third integer: 15
+
+Expected Output:
+Maximum value of three integers: 35 
+
+----------------------------------------------------------
+
+16. Calculate distance between two points
+
+Write a C program to calculate the distance between two points.
+
+Hint: Formula for distance is d = √((x₂ - x₁)² + (y₂ - y₁)²)
+	- To take the square root, include the math library
+	- #include <math.h>
+	- Use the "sqrt" function to get the square root.
+	- Example usage: sqrt(4) will give a result of 2.0
+	- Example usage: sqrt(16) will give a result of 4.0
+	
+Test Data :
+Input x1: 25
+Input y1: 15
+Input x2: 35
+Input y2: 10
+
+Expected Output:
+Distance between the said points: 11.1803 
+
+----------------------------------------------------------
+
+17. Convert seconds into hours, minutes, seconds
+
+Write a C program to convert a given integer (in seconds) to hours, minutes and seconds.
+
+Test Data :
+Input seconds: 25300
+
+Expected Output:
+There are:
+H:M:S - 7:1:40 
+
+----------------------------------------------------------
+
+18. Break amount into smallest banknotes
+
+Write a C program to read an amount (integer value) and break the amount into the smallest possible number of bank notes.
+The input amount will always be smaller than 1000.
+
+Hint: Use the modulo operator %
+	- Example usage: 10%2 equals 0 (because 10/2 equals 5 and no remainder)
+	- 10%3 equals 1 (becuase 10/3 equals 9 and 1 is the remainer)
+	- 5%3 equals 2 (because 5/3 equals 1 and 2 is the remaider)
+	- How many 100 rupee notes are in a thousand?
+	- How many 50 rupee notes are in a 100?
+	- Can you use integer division and remainders to solve this?
+	
+
+Test Data :
+Input the amount: 375
+
+Expected Output:
+There are:
+3 Note(s) of 100.00
+1 Note(s) of 50.00
+1 Note(s) of 20.00
+0 Note(s) of 10.00
+1 Note(s) of 5.00
+0 Note(s) of 2.00
+0 Note(s) of 1.00
+
+----------------------------------------------------------
+
+19. Validate four integers based on conditions
+
+Write a C program that accepts 4 integers p, q, r, s from the user where q, r and s are positive and p is even. If q is greater than r and s is greater than p and if the sum of r and s is greater than the sum of p and q print "Correct values", otherwise print "Wrong values".
+
+Hint: Use logical operators && (and), || (or)
+
+
+Test Data :
+Input the second integer: 35
+Input the third integer: 15
+Input the fourth integer: 46
+
+Expected Output:
+Wrong values 
+
+----------------------------------------------------------
+
+20. Sum all odd numbers among five inputs
+
+Write a C program that reads 5 numbers and sums all odd values between them.
+
+Hint: What's the remainder when an odd number is divided by two?
+
+Test Data :
+Input the first number: 11
+Input the second number: 17
+Input the third number: 13
+Input the fourth number: 12
+Input the fifth number: 5
+
+Expected Output:
+Sum of all odd values: 46 

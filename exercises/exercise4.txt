@@ -1,0 +1,191 @@
+Programming Challenge: 3
+Dated: 1st of August, 2025
+=========================
+0. Read all the rules below.
+1. The output on cmd must match the Expected Output exactly.
+2. All programs must start with a comment of program description.
+3. Write solution logic in comments before writing the program in comments.
+4. Make variable and function names meaningful. In other words, a variable name should tell the name of the value it holds. Write code as if it's going to be read by another human. Example:
+	- number of players -> num_players
+	- sum of odd numbers -> sum_odds
+	- counter -> count or counter
+	- rectangle area -> rect_area or rectangle_area
+5. Write properly formatted code.
+6. Use of ChatGPT or Google's Gemini (in google search) is not allowed for formulas or logic of the program. To find syntax solutions or advice or reading material use: https://duckduckgo.com/
+7.	a. For every function that is used from the C library (such as stdio, math, etc.) write it's signature (input/output usage in comments before use). For example, the signature of the 'pow' function is:
+	double pow(double base, double exponent);
+	b. For every function you implement, write it's input and output in the comments inside the function definition. For example:
+	int add_one(int number){
+		// Input: int number
+		// Output: int
+		
+		return number+1;
+	}
+8. Write each program step by step and make sure to check each step before updating the code.
+9. The final source code (C files) should be submitted by email.
+
+==========================================================
+
+31. Check for valid triangle and calculate perimeter
+
+Write a C program that the lengths of the three sides of a triangle and checks if it is possible to make a triangle with them. Determine the perimeter of the triangle, if the given values are valid. If the triangle is invalid, print "Invalid triangle" in the output.
+
+Note(s):
+	- The perimeter of a triangle is the total length of all it's sides.
+	- A triangle is valid if sum of its two sides is greater than the third side. A visual of this can be seen here:	https://media.geeksforgeeks.org/wp-content/uploads/check-whether-triangle-valid-not-sides-given1.jpg
+	- Intuitively, this basically means that if the two sides are greater than the other (for all 3 sides), then the three lines can be joined to form a triangle. If not, then the three lines won't fit evenly to form a triangle (with the given lengths).
+
+Test Data :
+Input the first number: 25
+Input the second number: 15
+Input the third number: 35
+
+Expected Output:
+Perimeter = 75.0 
+
+----------------------------------------------------------
+
+32. Check if two integers are multiples
+
+Write a C program that reads two integers and checks whether they are multiplied or not.
+
+Test Data :
+Input the first number: 5
+Input the second number: 15
+
+Expected Output:
+Multiplied! 
+
+----------------------------------------------------------
+
+33. Print all even numbers between 1 and 50
+
+Write a C program that prints all even numbers between 1 and 50 (inclusive).
+
+Test Data :
+Even numbers between 1 to 50 (inclusive):
+
+Expected Output:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50
+
+----------------------------------------------------------
+
+34. Count positives and calculate their average from 5 inputs
+
+Write a C program that reads 5 numbers, counts the number of positive numbers, and prints out the average of all positive values.
+
+Note: Average is the sum of items divided by their count. So, if you buy 1 apple for 10rs, 1 banana for 12rs, and one mango for 17rs, then the average price per item is: (10+12+17)/3 => 39rs. In other words, an average value says: What would be the price per item if all items had the same price?
+
+Test Data :
+Input the first number: 5
+Input the second number: 8
+Input the third number: 10
+Input the fourth number: -5
+Input the fifth number: 25
+
+Expected Output:
+Number of positive numbers: 4
+Average value of the said positive numbers: 12.00
+
+----------------------------------------------------------
+
+35. Print squares of all even numbers up to a given value
+
+Write a C program to find and print the square of all the even values from 1 to a specified value.
+
+Test Data :
+Enter a value: 4
+
+Expected Output:
+2^2 = 4
+4^2 = 16 
+
+----------------------------------------------------------
+
+36. Print numbers between 1 and 100 with a specific remainder
+
+Write a C program to print all numbers between 1 and 100 which are divided by an input number and the remainder will be 3.
+
+Test Data :
+Input an integer: 25
+
+Expected Output:
+3
+28
+53
+78
+
+----------------------------------------------------------
+
+37. Determine quadrant of Cartesian coordinates (x, y)
+
+Write a C program to read the coordinates (x, y) (in the Cartesian system) and find the quadrant to which it belongs (Quadrant -I, Quadrant -II, Quadrant -III, Quadrant -IV).
+Note: A Cartesian coordinate system is a coordinate system that specifies each point uniquely in a plane by a pair of numerical coordinates.
+These are often numbered from 1st to 4th and denoted by Roman numerals: I (where the signs of the (x,y) coordinates are I(+,+), II (−,+), III (−,−), and IV (+,−).
+
+Note: You can see the cartesian coordinate image from the wikipedia page (https://en.wikipedia.org/wiki/Cartesian_coordinate_system). The four quadrants in the image can be see Quadrant-I (top-right), Quadrant-II (top-left), Quadrant-III (bottom-left), Quadrant-IV (bottom-right).
+
+Test Data :
+Input the Coordinate(x,y):
+x: 25
+y: 15
+
+Expected Output:
+Quadrant-I(+,+) 
+
+----------------------------------------------------------
+
+38. Divide two numbers or print if division isn't possible
+
+Write a program that reads two numbers and divides the first number by the second number. If division is not possible print "Division is not possible".
+
+Note: Division isn't possible if the denominator is 0. Divide by zero is illegal in programming and mathematics.
+
+Test Data :
+Input two numbers:
+x: 25
+y: 5
+
+Expected Output: 5.0 
+
+----------------------------------------------------------
+
+39. Find integers divisible by 7 with a remainder of 2 or 3
+
+Write a C program that finds all integer numbers that divide by 7 and have a remainder of 2 or 3 between two given integers.
+
+Test Data :
+Input the first integer: 25
+Input the second integer: 45
+
+Hint: Start by writing a program that prints all numbers between the given integers and the modify it.
+
+Expected Output:
+30
+31
+37
+38
+44
+
+----------------------------------------------------------
+
+40. Print n lines of 3 consecutive numbers starting from 1
+
+Write a C program to print 3 numbers on a line, starting with 1 and printing n lines. Accept the number of lines (n, integer) from the user.
+
+Hint: Start by writing a program that just prints the first column given an input; and then modify the program for fit requirements. For the example below, just start by printing:
+1
+4
+7
+10
+13
+
+Test Data :
+Input number of lines: 5
+
+Expected Output:
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+13 14 15 
