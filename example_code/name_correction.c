@@ -5,8 +5,8 @@
 int main()
 {
 	// Sample output: git mv ./exercise52c ./exercise41.c
-	for(int i=52; i<=59; i++){
-		printf("git mv .\\exercise%d.c .\\exercise%d.c\n", i, i-11);
+	for(int i=53; i<59; i++){
+		printf("git mv .\\exercise%d.c .\\exercise%d.c\n", i, i+1);
 	}
 	
 	return 0;
