@@ -1,0 +1,306 @@
+Programming Challenge: 7
+
+Dated: 31st of August, 2025
+===========================
+0. Read all the rules below.
+1. The output on cmd must match the Expected Output exactly.
+2. All programs must start with a comment of program description.
+3. Write solution logic in comments before writing the program in comments.
+4. Make variable and function names meaningful. In other words, a variable name should tell the name of the value it holds. Write code as if it's going to be read by another human. Example:
+	- number of players -> num_players
+	- sum of odd numbers -> sum_odds
+	- counter -> count or counter
+	- rectangle area -> rect_area or rectangle_area
+5. Write properly formatted code.
+6. Use of ChatGPT or Google's Gemini (in google search) is not allowed for formulas or logic of the program. To find syntax solutions or advice or reading material use: https://duckduckgo.com/
+7.	a. For every function that is used from the C library (such as stdio, math, etc.) write it's signature (input/output usage in comments before use). For example, the signature of the 'pow' function is:
+	double pow(double base, double exponent);
+	b. For every function you implement, write it's input and output in the comments inside the function definition. For example:
+	int add_one(int number){
+		// Input: int number
+		// Output: int
+		
+		return number+1;
+	}
+8. Write each program step by step and make sure to check each step before updating the code.
+9. The final source code (C files) should be .
+
+
+*** HINT: Use paper and pencil to understand and write the logic BEFORE starting with the code.
+
+==========================================================
+
+61. Print Roman numeral equivalents for numbers 1 to 20
+
+Write a C program to print a table of all the Roman numeral equivalents of decimal numbers in the range 1 to 50.
+
+Hint: https://www.youtube.com/watch?v=P_qD1GJ1dR8
+
+Sample Output:
+
+Decimal  Roman
+number   numeral
+-------------------
+1        I
+2        II
+3        III
+4        IV
+.....
+20		 XX
+
+==========================================================
+
+62. Print Fahrenheit-Celsius conversion tables (0–150°C)
+
+Write two functions to convert corresponding values of Fahrenheit to Celsius and Celsius to Fahrenheit.
+
+Using the two functions, implement the following.
+
+Both cases initial tempratue = 0, maximum temperature = 150 and step 10
+
+Sample Output:
+
+Celsius to Fahrenheit
+---------------------
+Celsius   Fahrenheit
+   0.0 	     32.0
+  10.0 	     50.0
+  20.0 	     68.0
+  30.0 	     86.0
+....
+ 120.0 	    248.0
+ 130.0 	    266.0
+ 140.0 	    284.0
+ 150.0 	    302.0
+
+
+Fahrenheit to Celsius
+---------------------
+Fahrenheit  Celsius
+   0.0 	    -17.8
+  10.0 	    -12.2
+  20.0 	     -6.7
+  30.0 	     -1.1
+  40.0 	      4.4
+  50.0 	     10.0
+ ...
+ 120.0 	     48.9
+ 130.0 	     54.4
+ 140.0 	     60.0
+ 150.0 	     65.6
+
+==========================================================
+
+63. Count blanks, tabs, and newlines in a given text
+
+Write a C program to count spaces and newlines in the following text.
+
+Hint: See "example_code/multi_line_str.c" and "example_code/arrays.c" (string part)
+
+Sample Input:
+The quick
+brown fox jumps
+over the lazy dog
+
+Sample Output:
+
+blank=6,newline=3
+
+==========================================================
+
+64. Print each word of input text on a new line
+
+Write a C program that accepts some text from the user and prints each word of that text on a separate line.
+
+Sample Output:
+
+Input some text:
+The quick brown fox jumps over the lazy dog
+The
+quick
+brown
+fox
+jumps
+over
+the
+lazy
+dog
+
+==========================================================
+
+65. Create a histogram for input integer values
+
+Write a C program that takes some integer values from the user and prints a histogram.
+Sample Output:
+
+Input number of histogram bar (Maximum 10):
+4
+Input the values between 0 and 10 (separated by space):
+9
+7
+4
+3
+
+
+Histogram:
+#########
+#######
+####
+###
+
+
+==========================================================
+
+66. Write a C program that reads the side (side sizes between 1 and 10 ) of a square and prints square using hash (*) character and it's diagonals.
+
+Test Data:
+Input Size: 10
+
+Expected Output:
+**********
+**       *
+* *      *
+*  *     *
+*   *    *
+*    *   *
+*     *  *
+*      * *
+*       **
+**********
+
+==========================================================
+
+67. Count even, odd, positive, and negative values from 7 integers
+
+Write a C program that accepts 7 integer values and counts the even, odd, positive and negative values.
+
+Sample Output:
+Input 7 integers:
+10
+12
+15
+-15
+26
+35
+17
+
+Number of even values: 3
+Number of odd values: 4
+Number of positive values: 6
+Number of negative values: 1
+
+==========================================================
+
+68. Generate and print a sequence
+
+Write a C program to create and print the sequence of the following example.
+Sample Output:
+
+a=1      b=100
+a=6      b=90
+a=11     b=80
+a=16     b=70
+a=21     b=60
+a=26     b=50
+a=31     b=40
+a=36     b=30
+a=41     b=20
+a=46     b=10
+a=51     b=0
+
+==========================================================
+
+69. Sum of even numbers between two integers
+
+Write a C program that accepts two integer values and calculates the sum of all even values between them.
+Sample Output:
+
+Input two numbers (integer values):
+25
+45
+
+Sum of all even values between 25 and 45
+350
+
+==========================================================
+
+70. High score write, update, and delete program
+
+Write a C program helps the user manage their high score table. The user has the following requirements for their program:
+
+1. Store a maximum of 10 scores at a time
+
+2. The user can give three commands to the program namely 'w' if they want 
+to write a new score, 'u' if they want to update an existing entry, or 'q' if they want to quit.
+
+3. After each user operation, the high score table should be reprinted along with the indices.
+
+4. The program should have error checking code to prevent illegal commands or values. In case of an error, the program should print an error message explaining the error and exit. (See exit function in exercise 52a).
+
+Hint: Start small.
+
+Sample Output:
+
+High score table:
+0. 0
+1. 0
+2. 0
+3. 0
+4. 0
+5. 0
+6. 0
+7. 0
+8. 0
+9. 0
+
+Enter a command: w
+Enter an index: 5
+Enter a value: 99
+
+High score table:
+0. 0
+1. 0
+2. 0
+3. 0
+4. 0
+5. 99
+6. 0
+7. 0
+8. 0
+9. 0
+
+Enter a command: w
+Enter an index: 0
+Enter a value: 100
+
+High score table:
+0. 100
+1. 0
+2. 0
+3. 0
+4. 0
+5. 99
+6. 0
+7. 0
+8. 0
+9. 0
+
+Enter a command: u
+Enter an index: 5
+Enter a value: 88
+
+High score table:
+0. 100
+1. 0
+2. 0
+3. 0
+4. 0
+5. 88
+6. 0
+7. 0
+8. 0
+9. 0
+
+Enter a command: q
+
+Good bye.
