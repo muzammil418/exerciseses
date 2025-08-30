@@ -3,7 +3,7 @@
 int main()
 {
 	//store data types
-	int n, i,j;
+	int n, i,k;
 	
 	//take input
 	 printf("Enter the length of perpendicular of triangle: ");
@@ -11,7 +11,7 @@ int main()
 	
 	//loop 
 	for(i = 1; i <= n; i++){
-		for( j = 1;j <= n ;j++){
+		for(int j = n -i; j > 0; j--){
 			printf(" ");
 		}
 		for (int l = 1;l <= i ;l++){

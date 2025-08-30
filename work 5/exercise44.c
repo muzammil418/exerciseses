@@ -11,7 +11,7 @@ int main()
 	printf("Input Mathematics marks (0 or negative terminate):\n");
 	
 	//loop
-	for(;1;){
+	while(1){
 		 scanf("%d", &marks);
 		 
 		 if(marks <= 0)
@@ -20,8 +20,8 @@ int main()
 		 }
 		 
 		sum += marks;
-		count++;	
-	}
+		count++;
+	}		
 	
 	if(count > 0){
 		printf("Average marks in Mathematics: %.2f\n", sum / count);
