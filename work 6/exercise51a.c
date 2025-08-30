@@ -3,7 +3,7 @@
 #include <math.h>
 
 /*
-Take a binary number as input from the user and convert it to decimal. Maximum user input can be of length 8. User input must be a positive number.
+51a:Take a binary number as input from the user and convert it to decimal. Maximum user input can be of length 8. User input must be a positive number.
 
 (if needed) Use the strlen function from string.h library to verify the length.
 Usage: strlen("Hello"); // returns 5 as result

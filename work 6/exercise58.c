@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Write a C program to read an array of length 6 and find the smallest element and its position.
+
 int main()
 {
 	int find_small_num_in_array[6] = {0};
