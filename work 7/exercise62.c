@@ -31,4 +31,6 @@ int main()
 		printf("%.2f 	      %.2f", i,calculate_Fahrenheit_to_Celsius(i));
 		printf("\n");
 	}
+	
+	return 0;
 }
