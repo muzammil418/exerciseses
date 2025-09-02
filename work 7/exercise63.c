@@ -29,5 +29,6 @@ int main()
 	printf("blanks %d\n", count_blanks);
 	printf("count tab %d\n", count_tab);
 	
+	
 	return 0;
 }
