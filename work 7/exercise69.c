@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Write a C program that accepts two integer values and calculates the sum of all even values between them.
+
 int main()
 {
 	int num1 = 0;
