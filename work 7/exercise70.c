@@ -32,8 +32,8 @@ int main()
 			printf("\nHigh score table:\n");
 			for (int i = 0;i < 10; i++){
 				printf("%d. %d\n", i,score[i]);
+			}
 		}
-	}
 	if (command == 'u'){
 			printf("Enter an index:");
 			scanf("%d", &index);
@@ -46,7 +46,7 @@ int main()
 			printf("\nHigh score table:\n");
 			for (int i = 0;i < 10; i++){
 				printf("%d. %d\n", i,score[i]);
-		}
+			}
 	}
 	if (command == 'q'){
 		exit(0);

@@ -14,15 +14,15 @@ int main()
 	
 	for(int i = 0;string[i] != '\0';i++){
 		
-	if (string[i] == ' '){
-		count_blanks++;
-	}
-	if (string[i] == '\n'){
-		count_newline++;
-	}
-	if (string[i] == '\t'){
-		count_tab++;
-	}
+		if (string[i] == ' '){
+			count_blanks++;
+		}
+		if (string[i] == '\n'){
+			count_newline++;
+		}
+		if (string[i] == '\t'){
+			count_tab++;
+		}
 	}
 	
 	printf("newlines %d\n", count_newline);
