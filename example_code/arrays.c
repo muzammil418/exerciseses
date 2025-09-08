@@ -41,7 +41,7 @@ int main(){
 	char myStr[] = "Hello"; // compiler auto makes string
 	
 	// Manually make a string
-	char myOwnStr[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+	char myOwnStr[10] = {'H', 'e', 'l', 'l', 'o', '\0'};
 	
 	printf("All highscores\n");
 	
