@@ -11,7 +11,7 @@ int main(){
 		unsigned int leg_count;
 	};
 	
-	struct Animal cow = { "Gau Mata", 120, 4 };
+	struct Animal cow = { "Gordon", 120, 4 };
 	
 	printf("Animal: name=%s, weight=%d kg, leg_count=%d\n", cow.name, cow.weight, cow.leg_count);
 	
