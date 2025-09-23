@@ -23,11 +23,7 @@ int main() {
     }
 
     for (int i = 0; i < 5; i++) {
-        if (counts[i] == 1) {
-            printf("Century %d: %d book\n", i + 1, counts[i]);
-        } else {
-            printf("Century %d: %d books\n", i + 1, counts[i]);
-        }
+            printf("Century %d: %d book\n", i + 1, counts[i],counts[i] == 1 ? "book" : "books");
     }
 
     return 0;
