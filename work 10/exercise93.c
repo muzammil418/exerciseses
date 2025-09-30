@@ -9,7 +9,7 @@ int main() {
     int mid1 = SIZE / 2 - 1;
     int mid2 = SIZE / 2;
 
-    int newArr[2] = {arr[mid1], arr[mid2]};
+    int NewArr[2] = {arr[mid1], arr[mid2]};
 
     printf("Elements in original array are: ");
     for (int i = 0; i < SIZE; i++) {
@@ -19,14 +19,7 @@ int main() {
         }
     }
 
-    printf("\nNew array: ");
-    for (int i = 0; i < 2; i++) {
-        printf("%d", newArr[i]);
-        if (i < 1) {
-            printf(", ");
-        }
-    }
-	printf("\n");
-
+    printf("\nNew array: %d, %d \n", NewArr[0], NewArr[1]);
+   
     return 0;
 }

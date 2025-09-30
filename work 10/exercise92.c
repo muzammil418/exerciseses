@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function to calculate sum of array
 int arraySum(int arr[], int size) {
     int sum = 0;
     for (int i = 0; i < size; i++) {
@@ -9,7 +8,6 @@ int arraySum(int arr[], int size) {
     return sum;
 }
 
-// Function to print array
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         printf("%d", arr[i]);

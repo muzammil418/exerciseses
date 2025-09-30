@@ -3,36 +3,40 @@
 //94. Merge Two Arrays of Length 3
 //Write a C program to create a new array from two given arrays of integers, each of length 3.
 
+void printArray(int arr[], int size){
+    
+     for (int i = 0; i < size; i++) {
+        printf("%d", arr[i]);
+        if (i < size - 1) printf(", ");
+    }
+    
+}
+
+void mergeArray(int Arr1[], int Arr2[], int NewArr[], int size){
+    for (int i = 0; i < size; i++) {
+        NewArr[i] = Arr1[i];
+        NewArr[i + size] = Arr2[i];
+    }
+  
+    
+}
 
 int main() {
     int arr1[3] = {10, 20, 30};
     int arr2[3] = {40, 50, 60};
     int newArr[6];
 
-    for (int i = 0; i < 3; i++) {
-        newArr[i] = arr1[i];
-    }
-    for (int i = 0; i < 3; i++) {
-        newArr[i + 3] = arr2[i];
-    }
+     mergeArray(arr1, arr2, newArr, 3);
 
-    printf("Elements in original array1 are: ");
-    for (int i = 0; i < 3; i++) {
-        printf("%d", arr1[i]);
-        if (i < 2) printf(", ");
-    }
+    printf("Elements in first array: ");
+    printArray(arr1, 3);
 
-    printf("\nElements in original array2 are: ");
-    for (int i = 0; i < 3; i++) {
-        printf("%d", arr2[i]);
-        if (i < 2) printf(", ");
-    }
+    printf("\nElements in second array: ");
+    printArray(arr2, 3);
 
     printf("\nNew array: ");
-    for (int i = 0; i < 6; i++) {
-        printf("%d", newArr[i]);
-        if (i < 5) printf(", ");
-    }
-
+    printArray(newArr, 6);
+    printf("\n");
+    
     return 0;
 }
