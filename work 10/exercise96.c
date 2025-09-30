@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//96. Check for Adjacent 5's in Array
+//Write a C program to check whether a given array of integers contains 5 next to a 5 somewhere.
+
+
 int main()
 {
     int arr1[3] = {1,2,4};

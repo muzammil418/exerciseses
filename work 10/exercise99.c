@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//99. Print Unique Elements
+//Write a program in C to print all unique elements in an array.
+
 int main() {
     int n = 0;
 	int count = 0;

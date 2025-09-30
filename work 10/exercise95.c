@@ -1,5 +1,9 @@
 #include <stdio.h>
 #define size 6
+
+//95. Swap First and Last in Array
+//Write a C program to create a new array by swapping the first and last elements of a given array of integers whose length is at least 1.
+
 int main() {
     int arr[size] = {1, 5, 7, 9, 11, 13};
     int newArr[size];

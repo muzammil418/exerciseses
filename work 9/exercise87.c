@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//87. Left Rotate Array
+
+//Write a C program to rotate the elements of a given array of integers (length 4 ) in the left direction and return the updated array.
+
 int main()
 {
     int arr[4] = {10, 20, 30, 40};

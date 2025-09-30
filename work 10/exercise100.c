@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//100. Sort Array Ascending
+//Write a program in C to sort elements of an array in ascending order.
+
 int main() {
     int n = 0;
 	int temp;

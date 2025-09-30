@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//91. New Array from First and Last Elements
+//Write a C program to create a new array taking the first and last elements of a given array of integers and length one or more.
+
 int main()
 {
     int n_of_arr = 0;

@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//83. Second Largest Among Three
+
+//Write a C program that accepts three integers from the user and finds the second largest number among them.
+
 int main() {
     int n1, n2, n3;
 

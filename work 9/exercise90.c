@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//90. Extract Middle Elements from Two Arrays
+//Write a C program to create a new array containing the middle elements from the two given arrays of integers, each of length 5.
+
 int main()
 {
     int arr1[5] = {10, 20, -30, -40, 30};

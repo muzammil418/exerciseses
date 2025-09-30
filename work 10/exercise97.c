@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//97. Shift Zeros to Left in Array
+//Write a C program to create a new array from a given array of integers shifting all zeros to left direction.
+
+
 int main()
 {
 	int arr1[9] = {1, 2, 0, 3, 5, 7, 0, 9, 11};

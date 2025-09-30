@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//92. Compare Sum of Two Arrays
+//Write a C program to compute the sum of the two given arrays of integers, length 3 and find the array that has the largest sum.
+
 int main()
 {
     int arr1[3] = {10, 20, -30};

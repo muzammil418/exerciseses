@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+//84. Intersection of Two Sequences
+
+//Write a C program that accepts two sequences ((a1, a2, .. an), (b1, b2, .. bn)) of integers as input. Find all integers that appear in both sequences, one by one, in ascending order.
+
+
 int main()
 {
     int size1, size2;

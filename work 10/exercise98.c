@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+//98. Partition Array: Evens Before Odds
+//Write a C program to create an array from a given array of integers shifting all even numbers before all odd numbers.
+
+
 int main() {
     int arr[9] = {1, 2, 5, 3, 5, 4, 6, 9, 11};
     int newArr[9];

@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+//85. Sum Before and After Maximum
+
+//Write a C program that accepts a sequence of different values and calculates the sum of the values before and after the maximum value.
+//The sum of the values before the maximum value is 0, if there are no values before the maximum. Similarly, the sum of the values after the maximum value is 0, if there are no values after the maximum.
+
+
 int main() {
     int size;
     printf("Enter size of array: ");
