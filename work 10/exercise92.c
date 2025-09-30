@@ -1,52 +1,42 @@
 #include <stdio.h>
 
-//92. Compare Sum of Two Arrays
-//Write a C program to compute the sum of the two given arrays of integers, length 3 and find the array that has the largest sum.
+// Function to calculate sum of array
+int arraySum(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
 
-int main()
-{
+// Function to print array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d", arr[i]);
+        if (i < size - 1) {
+            printf(", ");
+        }
+    }
+    printf("\n");
+}
+
+int main() {
     int arr1[3] = {10, 20, -30};
     int arr2[3] = {10, 20, 30};
-    int arr1_sum = 0;
-    int arr2_sum = 0;
 
     printf("Elements in original array are: ");
-    for (int i = 0; i < 3; i++) {
-        printf("%d", arr1[i]);
-        if (i < 2) {
-            printf(", ");
-        }
-        arr1_sum += arr1[i];
-    }
+    printArray(arr1, 3);
+    printf("Elements in original array are: ");
+    printArray(arr2, 3);
 
-    printf("\nElements in original array are: ");
-    for (int i = 0; i < 3; i++) {
-        printf("%d", arr2[i]);
-        if (i < 2) {
-            printf(", ");
-        }
-        arr2_sum += arr2[i];
-    }
+    int sum1 = arraySum(arr1, 3);
+    int sum2 = arraySum(arr2, 3);
 
-    printf("\n");
-    if (arr1_sum > arr2_sum) {
-        printf("The array which has the largest sum: ");
-        for (int i = 0; i < 3; i++) {
-            printf("%d", arr1[i]);
-            if (i < 2) {
-                printf(", ");
-            }
-        }
-		printf("\n");
+    printf("The array which has the largest sum: ");
+    if (sum1 > sum2) {
+        printArray(arr1, 3);
     } else {
-        printf("The array which has the largest sum: ");
-        for (int i = 0; i < 3; i++) {
-            printf("%d", arr2[i]);
-            if (i < 2) {
-                printf(", ");
-            }
-        }
-		printf("\n");
+        printArray(arr2, 3);
     }
 
     return 0;
