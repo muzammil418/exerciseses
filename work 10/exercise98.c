@@ -1,12 +1,22 @@
 #include <stdio.h>
+#define SIZE 9
 
 //98. Partition Array: Evens Before Odds
 //Write a C program to create an array from a given array of integers shifting all even numbers before all odd numbers.
 
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d", arr[i]);
+        if (i < size - 1) {
+            printf(", ");
+        }
+    }
+    printf("\n");
+}
 
 int main() {
-    int arr[9] = {1, 2, 5, 3, 5, 4, 6, 9, 11};
-    int newArr[9];
+    int arr[SIZE] = {1, 2, 5, 3, 5, 4, 6, 9, 11};
+    int newArr[SIZE];
     int j = 0;
 
     for (int i = 0; i < 9; i++) {
@@ -24,16 +34,10 @@ int main() {
     }
 
     printf("Elements in original array are: ");
-    for (int i = 0; i < 9; i++) {
-        printf("%d", arr[i]);
-        if (i < 8) printf(", ");
-    }
-
+    printArray(arr, SIZE);
+    
     printf("\nElements in new array are: ");
-    for (int i = 0; i < 9; i++) {
-        printf("%d", newArr[i]);
-        if (i < 8) printf(", ");
-    }
+    printArray(newArr, SIZE);
 	printf("\n");
 
     return 0;

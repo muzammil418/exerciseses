@@ -1,8 +1,17 @@
 #include <stdio.h>
-
+#define SIZE 9
 //97. Shift Zeros to Left in Array
 //Write a C program to create a new array from a given array of integers shifting all zeros to left direction.
 
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d", arr[i]);
+        if (i < size - 1) {
+            printf(", ");
+        }
+    }
+    printf("\n");
+}
 
 int main()
 {
@@ -25,20 +34,10 @@ int main()
 	}
 	
 	printf("Elements in original array are: ");
-	for(int i = 0;i < 9;i++){
-		printf("%d", arr1[i]);
-		if(i < 9 - 1){
-			printf(", ");
-		}
-	}
+    printArray(arr1, SIZE);
 	
 	printf("\nElements in new array are: ");
-	for(int i = 0;i < 9; i++){
-		printf("%d", newarr[i]);
-		if(i < 9 - 1){
-			printf(", ");
-		}
-	}
+	printArray(newarr, SIZE);
 	printf("\n");
 	
 	return 0;
