@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 //82. Reverse Substring
-
 //Write a C program that takes a string and two integers (n1, n2). Now reverse the sequence of characters in the string between n1 and n2.
 
 int main()
@@ -19,10 +18,15 @@ int main()
     printf("Enter second position: ");
     scanf("%d", &n2);
     
-    
-    temp = string[n1 - 1];
-    string[n1 - 1] = string[n2 - 1];
-    string[n2 - 1] = temp;
+    while (n1 < n2)
+    {
+        temp = string[n1 - 1];
+        string[n1 - 1] = string[n2 - 1];
+        string[n2 - 1] = temp;
+        
+        n1++;
+        n2--;
+    }
     
     printf("Updated string: %s\n", string);
     

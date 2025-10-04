@@ -13,12 +13,11 @@ int main()
         printf("%d ", arr[i]);
     }
 
-    while (i < j) {
+    for(int i = 0; i < j; i++){
         temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
 
-        i++;
         j--;
     }
 
