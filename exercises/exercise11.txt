@@ -1,0 +1,94 @@
+Programming Challenge: 11
+
+Dated: 06th of October, 2025
+===========================
+0. Read all the rules below.
+1. The output on cmd must match the Expected Output exactly.
+2. All programs must start with a comment of program description.
+3. Write solution logic in comments before writing the program in comments.
+4. Make variable and function names meaningful. In other words, a variable name should tell the name of the value it holds. Write code as if it's going to be read by another human. Example:
+	- number of players -> num_players
+	- sum of odd numbers -> sum_odds
+	- counter -> count or counter
+	- rectangle area -> rect_area or rectangle_area
+5. Write properly formatted code.
+6. Use of ChatGPT or Google's Gemini (in google search) is not allowed for formulas or logic of the program. To find syntax solutions or advice or reading material use: https://duckduckgo.com/
+7.	a. For every function that is used from the C library (such as stdio, math, etc.) write it's signature (input/output usage in comments before use). For example, the signature of the 'pow' function is:
+	double pow(double base, double exponent);
+	b. For every function you implement, write it's input and output in the comments inside the function definition. For example:
+	int add_one(int number){
+		// Input: int number
+		// Output: int
+		
+		return number+1;
+	}
+8. Write each program step by step and make sure to check each step before updating the code.
+9. The final source code (C files) should be .
+
+
+*** HINT: Use paper and pencil to understand and write the logic BEFORE starting with the code.
+
+==========================================================
+
+101. 1. Student Structure Operations
+
+Create a structure called "Student" with members name, age, and total marks. Write a C program to input data for two students, display their information, and find the average of total marks.
+
+==========================================================
+
+102. Time Structure Calculations
+
+Define a structure named Time with members hours, minutes, and seconds. Write a C program to input two times, add them, and display the result in proper time format.
+
+==========================================================
+
+103. Book Structure Management
+
+Create a structure named Book to store book details like title, author, and price. Write a C program to input details for three books, find the most expensive and the lowest priced books, and display their information.
+
+==========================================================
+
+104. Circle Structure Calculations
+
+Define a structure named Circle to represent a circle with a radius. Write a C program to calculate the area and perimeter of two circles and display the results.
+
+==========================================================
+
+105. Employee Structure Processing
+
+Create a structure named "Employee" to store employee details such as employee ID, name, and salary. Write a program to input data for three employees, find the highest salary employee, and display their information.
+
+==========================================================
+
+106. Date Structure Operations
+
+Define a structure named "Date" with members day, month, and year. Write a C program to input two dates and find the difference in days between them.
+
+==========================================================
+
+107. Queue Implementation with Structures
+
+Write a C program that implements a simple queue using a structure. The structure should contain an array representing the queue and front and rear indices. Include functions for enqueue and dequeue operations.
+
+==========================================================
+
+108. Car Structure Management
+
+Design a structure named "Car" to store details like car ID, model, and rental rate per day. Write a C program to input data for three cars, calculate the total rental cost for a specified number of days, and display the results.
+
+==========================================================
+
+109. Rewrite the program in exercise 70 to use structures. In addition to the score, the program should also store username and date along with the high score. You can assume that the date can be stored as a string.
+
+Requirements
+
+- The funtionality of the program in exercise 70 should remain the same
+- The program should use structures to store related information together
+
+==========================================================
+110. Rewrite the program in exercise 80 to use structures. Group all related data together. 
+
+Requirements
+
+- The funtionality of the program in exercise 80 should remain the same
+- The program should use structures to store related information together
