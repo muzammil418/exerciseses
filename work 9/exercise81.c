@@ -11,7 +11,7 @@ int main() {
     scanf("%d", & n);
 
     int arr[n];
-    printf("enter %d positive numberL:\n", n);
+    printf("enter %d positive number:\n", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", & arr[i]);
     }
