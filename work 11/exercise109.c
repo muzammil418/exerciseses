@@ -21,7 +21,7 @@ int main() {
 	while(1){
 		printf("enter the command:");
 		scanf(" %c", &command);
-	
+		
 		if (command == 'w'){
 			printf("Enter an index:");
 			scanf("%d", &index);
@@ -31,15 +31,20 @@ int main() {
 			
 			printf("enter date (00-00-00): ");
             scanf("%s", h1.date);
-		
+			
 			printf("Enter a value:");
 			scanf("%d", &h1.value);
 			
-			// score[index] = h1.value;
-			// score[index] = h1.name;
+			score[index] = h1.value;
 			printf("\nHigh score table:\n");
 			for (int i = 0;i < 10; i++){
-			printf("%d. %d\n", i,score[i]);
+				if (i == index){
+					printf("%d. %d %s %s\n", i,score[i], h1.name, h1.date);
+				}
+				else{
+					printf("%d. 0\n", i);
+				}
+			}
 		}
 	// if (command == 'u'){
 			// printf("Enter an index:");
