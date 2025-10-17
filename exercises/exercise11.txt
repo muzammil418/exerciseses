@@ -70,6 +70,67 @@ Define a structure named "Date" with members day, month, and year. Write a C pro
 
 Write a C program that implements a simple queue using a structure. The structure should contain an array representing the queue and front and rear indices. Include functions for enqueue and dequeue operations.
 
+Expected behaviour:
+// Queue initially empty
+// front = -1, rear = -1
+// queue = [ ]
+
+enqueue(q_struct, 10);
+// queue = [10]
+// front = 0, rear = 0
+
+enqueue(q_struct, 20);
+// queue = [10, 20]
+// front = 0, rear = 1
+
+enqueue(q_struct, 30);
+// queue = [10, 20, 30]
+// front = 0, rear = 2
+
+dequeue(q_struct);
+// removes 10, returns 10
+// queue = [20, 30]
+// front = 1, rear = 2
+
+enqueue(q_struct, 40);
+// queue = [20, 30, 40]
+// front = 1, rear = 3
+
+enqueue(q_struct, 50);
+// queue = [20, 30, 40, 50]
+// front = 1, rear = 4
+
+enqueue(q_struct, 60);
+// queue overflow expected
+// queue = [20, 30, 40, 50]
+// front = 1, rear = 4
+
+dequeue(q_struct);
+// removes 20, returns 20
+// queue = [30, 40, 50]
+// front = 2, rear = 4
+
+dequeue(q_struct);
+// removes 30, returns 30
+// queue = [40, 50]
+// front = 3, rear = 4
+
+dequeue(q_struct);
+// removes 40, returns 40
+// queue = [50]
+// front = 4, rear = 4
+
+dequeue(q_struct);
+// removes 50, returns 50, queue becomes empty
+// front = -1, rear = -1
+// queue = [ ]
+
+dequeue(q_struct);
+//  returns NULL, queue underflow expected
+// front = -1, rear = -1
+// queue = [ ]
+
+
 ==========================================================
 
 108. Car Structure Management
