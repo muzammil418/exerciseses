@@ -1,23 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
+#define SIZE_ARR 5
 
-//Write a C program that accepts some text from the user and prints each word of that text on a separate line.
+struct pointertest{
+	int arr[50];
+};
 
-int main()
-{
-	char string[500] = "The quick brown fox jumps over the lazy dog";
-	int i = 0;
-	// printf("enter the string:\n");
-	// fgets(string, sizeof(string), stdin);
+void printMyArray(struct pointertest *p1, int sz){
+	for(int i=0; i<sz; i++){
+		printf("%d\n", *(p1->arr + i) );
+	}
+}
+
+int main(){
+	struct pointertest p1[7] = {{9,8,7,6,5,453,453}};
 	
-	// for (int i = 0;string[i] != '\0'; i++){
-		// if (string[i] == ' '){
-			// printf("\n");
-		// }
-		// else{
-			// printf("%c", string[i]);
-		// }
-	// }
-	printf("%c", string[i]);
+	// int arr[SIZE_ARR] = {9,8,7,6,5};
+	
+	
+	// int* ptrX = &arr[0]; // RHS: Address of 'x'. Address is a pointer.
+	
+	printf("Printing my array\n");
+	printMyArray(&p1, SIZE_ARR);
+	
+	printf("Address of 1st position by name: %d\n", p1);
+	//printf("Address of 1st position by pointer: %d\n", ptrX);
+	
 	return 0;
 }
