@@ -125,25 +125,6 @@ Fill in the **Add student** section:
 
 ```c
 void addStudent() {
-    FILE *fp = fopen("scores.txt", "a");
-    if (fp == NULL) {
-        printf("Error opening file!\n");
-        return;
-    }
-
-    char name[50];
-    int score;
-
-    printf("Enter student name: ");
-    scanf("%s", name);
-
-    printf("Enter score: ");
-    scanf("%d", &score);
-
-    fprintf(fp, "%s %d\n", name, score);
-
-    fclose(fp);
-    printf("Student added successfully!\n");
 }
 ```
 
@@ -160,21 +141,6 @@ Then call `addStudent()` inside `case 1`.
 
 ```c
 void viewStudents() {
-    FILE *fp = fopen("scores.txt", "r");
-    if (fp == NULL) {
-        printf("No student data found yet!\n");
-        return;
-    }
-
-    char name[50];
-    int score;
-
-    printf("\n--- All Students ---\n");
-    while (fscanf(fp, "%s %d", name, &score) != EOF) {
-        printf("%s\t%d\n", name, score);
-    }
-
-    fclose(fp);
 }
 ```
 
@@ -189,31 +155,6 @@ Call `viewStudents()` inside `case 2`.
 
 ```c
 void searchStudent() {
-    FILE *fp = fopen("scores.txt", "r");
-    if (fp == NULL) {
-        printf("Error: File not found!\n");
-        return;
-    }
-
-    char name[50], searchName[50];
-    int score;
-    int found = 0;
-
-    printf("Enter name to search: ");
-    scanf("%s", searchName);
-
-    while (fscanf(fp, "%s %d", name, &score) != EOF) {
-        if (strcmp(name, searchName) == 0) {
-            printf("Found: %s scored %d\n", name, score);
-            found = 1;
-            break;
-        }
-    }
-
-    if (!found)
-        printf("Student not found.\n");
-
-    fclose(fp);
 }
 ```
 
