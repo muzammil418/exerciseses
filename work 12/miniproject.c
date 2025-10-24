@@ -69,7 +69,7 @@ void searchStudent() {
     
     //using fscanf to print strings or integers
     while(fscanf(fp, "%s  %d", ninput, &sinput) != EOF){
-		 if(strcmp(name,ninput) == 0) && (score == sinput)){
+		 if((strcmp(name,ninput) == 0) && (score == sinput)){
             printf("%s %d\n", name, score);
          }
         else{
