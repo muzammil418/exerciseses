@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #define MAX_BOOKS 100
 #define FILE_NAME "library.txt"
@@ -17,7 +18,7 @@ typedef struct {
 int loadBooks(Book *books, int max){
 	//open file and check if its emty or not
 	FILE *fp = fopen("library.txt", "r");
-	  if (fp == NULL) {
+	if (fp == NULL) {
         printf("Error opening file!\n");
         return 0;
     }
@@ -41,6 +42,16 @@ int loadBooks(Book *books, int max){
 }
 
 void saveBooks(Book *books, int count) {
+	char confirm;
+
+    printf("Do you want to save changes to file? (y/n): ");
+    scanf(" %c", &confirm);
+
+    if (confirm != 'y' && confirm != 'Y') {
+        printf("Save canceled! Data is only in memory.\n");
+        return;
+    }
+	
 	//open file
 	FILE *fp = fopen("library.txt", "w");
 	if (fp == NULL) {
@@ -169,7 +180,96 @@ void deleteBook(Book *books, int *count){
 }
 int menu(void);
 
+void sortBooksByTitle(Book *books, int count) {
+	Book temp;
+	
+	for(int i = 0; i < count - 1; i++){
+		for(int j = 0;j < count - i -1; j++){
+			if(strcasecmp(books[j].title, books[j + 1].title) > 0) {
+				temp = books[j];
+                books[j] = books[j + 1];
+                books[j + 1] = temp;
+			}
+		}
+		
+	}
+	printf("books sorted (A - Z)\n");
+	
+}
+
+void sortBooksByYear(Book *books, int count) {
+	Book temp;
+	
+	for(int i = 0;i < count -1; i++){
+		for(int j = 0;j < count - i - 1;j++){
+			if (books[j].year > books[j + 1].year) {
+                temp = books[j];
+                books[j] = books[j + 1];
+                books[j + 1] = temp;
+            }
+		}
+	}
+	printf("books sorted by year\n");
+	
+}
+
+void showBookCount(Book *books, int count) {
+    if (count == 0) {
+        printf("No books found!\n");
+        return;
+    }
+
+    int availableCount = 0;
+
+    for (int i = 0; i < count; i++) {
+        if (books[i].available == 1){
+            availableCount++;
+        }
+    }
+
+    printf("Available Books: %d\n", availableCount);
+	
+}
+
+void toggleAvailability(Book *books, int count) {
+	int id;
+	printf("enter the id of the book\n");
+	scanf("%d", &id);
+	
+	for(int i = 0;i < count; i++){
+		if(books[i].id == id){
+			
+			if(books[i].available == 1){
+				books[i].available = 0;
+				
+				printf("book checked-out successfully\n");
+			}
+			
+		}
+	}
+	//save changes
+	saveBooks(books, count);
+	
+}
+
 int main() {
+	
+	 struct stat st;
+    
+    // Check if file exists
+    if (stat("library.txt", &st) == -1) {
+        // File does not exist, create it
+        FILE *fp = fopen("library.txt", "w");
+        if (fp == NULL) {
+            printf("Error creating file!\n");
+            return 1;
+        }
+        fclose(fp);
+        printf("(Info) File created automatically: library.txt\n");
+    } else {
+        printf("(Info) Existing file found: library.txt\n");
+    }
+	
     Book books[MAX_BOOKS];
     int count = loadBooks(books, MAX_BOOKS);
 
@@ -198,6 +298,24 @@ int main() {
 			printf("Saved!\n"); 
 			
 			break;
+			case 6:
+			sortBooksByTitle(books, count);
+			saveBooks(books, count);
+			break;
+			
+			case 7:
+			sortBooksByYear(books, count);
+			saveBooks(books, count);
+			break;
+			
+			case 8:
+			showBookCount(books, count);
+			break;
+			
+			case 9:
+			toggleAvailability(books, count);
+			break;
+
             case 0: saveBooks(books, count); printf("Exiting...\n"); 
 			break;
 			
@@ -215,6 +333,10 @@ int menu(void) {
     printf("3. Search Book by Title\n");
     printf("4. Delete Book\n");
     printf("5. Save Catalog to File\n");
+	printf("6. Sort Books by Title\n");
+	printf("7. Sort Books by Year\n");
+	printf("8. Available books\n");
+	printf("9. Check-out Book\n");
     printf("0. Exit\n");
     printf("Enter choice: ");
     
