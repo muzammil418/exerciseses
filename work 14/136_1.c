@@ -15,10 +15,12 @@ int main() {
   }
 
   // Your code to find the length of the longest increasing subsequence goes here!
-  int longest_sequence_length = 0;
-
+   longest_sequence_length[0] = activation_codes[0];
+	int count = 1;
 	for(int i = 0;i < code_count;i++){
-		
+		for(int j = 1;j < code_count;j++){
+			
+		}
 	}
 
   // Example output (replace with your logic)
