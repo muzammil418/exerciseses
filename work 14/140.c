@@ -52,9 +52,10 @@ void loadegame (struct Player *p){
 	printf("game loaded successfully for player '%s'\n", p->name);
 }
 
+//game save function
 void savegame(struct Player *p){
 	//open file on write mode
-	FILE *fp = ("game.text", "w");
+	FILE *fp = fopen("game.txt", "w");
 	if (fp == NULL) {
         printf("Error opening file!\n");
         return;
@@ -73,13 +74,14 @@ void savegame(struct Player *p){
     printf("Game saved successfully!\n");
 }
 
-void explore(struct Player *p, struct Location locations[], int count){
+//explore function
+void explore(struct Player *p, struct Location locations[]){
     int choice = 0;
     int choicemob = 0;
     char wepon[20];
 
     while(1){
-
+		printf("your level is: %d\n", p->level);
         printf("where you want to go!\n");
         printf("1.forest level requirement:1 - 9\n");
         printf("2.cave level requirement:10 - 23\n");
@@ -91,7 +93,7 @@ void explore(struct Player *p, struct Location locations[], int count){
         if(choice == 1){
             struct Location loc = locations[0];
 
-            printf("your level is: %d\n", p->level);
+            printf("your level is: %.1f\n", p->level);
             printf("there are 3 mobs in forest:\n");
             printf("1.wolf (level 1+)\n");
             printf("2.goblin (level 4+)\n");
@@ -378,10 +380,89 @@ void explore(struct Player *p, struct Location locations[], int count){
                 }
             }
         }
+		if(choice == 4){
+			return;
+		}
 		
     } // while ends
 }
 
+void visitShop(struct Player *p){
+    struct Item shopItems[3] = {
+        {"sword", 5, 50},
+        {"axe", 8, 80},
+        {"bow", 4, 40}
+    };
+
+    int shopChoice = 0;
+
+    printf("\nWelcome to the shop!\n");
+    printf("Your gold: %d\n", p->gold);
+
+    printf("1. sword - 50 gold\n");
+    printf("2. axe - 80 gold\n");
+    printf("3. bow - 40 gold\n");
+    printf("4. leave shop\n");
+    scanf("%d", &shopChoice);
+
+    // SWORD
+    if(shopChoice == 1){
+        if(p->gold >= shopItems[0].cost){
+            if(p->itemCount < 5){
+                p->inventory[p->itemCount] = shopItems[0];
+                p->itemCount++;
+                p->gold -= shopItems[0].cost;
+                printf("you bought sword\n");
+            }
+            else{
+                printf("inventory full\n");
+            }
+        }
+        else{
+            printf("not enough gold\n");
+        }
+    }
+
+    // AXE
+    if(shopChoice == 2){
+        if(p->gold >= shopItems[1].cost){
+            if(p->itemCount < 5){
+                p->inventory[p->itemCount] = shopItems[1];
+                p->itemCount++;
+                p->gold -= shopItems[1].cost;
+                printf("you bought axe\n");
+            }
+            else{
+                printf("inventory full\n");
+            }
+        }
+        else{
+            printf("not enough gold\n");
+        }
+    }
+
+    // BOW
+    if(shopChoice == 3){
+        if(p->gold >= shopItems[2].cost){
+            if(p->itemCount < 5){
+                p->inventory[p->itemCount] = shopItems[2];
+                p->itemCount++;
+                p->gold -= shopItems[2].cost;
+                printf("you bought bow\n");
+            }
+            else{
+                printf("inventory full\n");
+            }
+        }
+        else{
+            printf("not enough gold\n");
+        }
+    }
+
+    if(shopChoice == 4){
+        printf("leaving shop...\n");
+    }
+}
 
 
 int main() {
@@ -395,9 +476,9 @@ int main() {
             return 1;
         }
         fclose(fp);
-        printf("(Info) File created automatically: library.txt\n");
+        printf("(Info) File created automatically: game.txt\n");
     } else {
-        printf("(Info) Existing file found: library.txt\n");
+        printf("(Info) Existing file found: game.txt\n");
     }
 	
 	
@@ -446,8 +527,8 @@ int main() {
 	
 	if(startchoice == 1){
 		printf("enter the player name: ");
-		scanf("%[^\n]", p.name);
-		getchar();
+		scanf("%s", p.name);
+		
 		
 		p.level = 1;
 		p.hp = 100;
@@ -456,11 +537,12 @@ int main() {
 		p.itemCount = 0;
 		savegame(&p);
 	}
-	else(startchoice == 2){
+	else if(startchoice == 2){
 		loadegame(&p);
 	}
 
 	int choice = 0;
+	int choice2 = 0;
 	
 	while(1){
 		choice = 0;
@@ -476,27 +558,37 @@ int main() {
 		
 		if(choice == 1) {
 			printf("Exploring...\n");
-			// explore function call karenge
+			explore(&p, locations);
 		} 
 		else if(choice == 2) {
 			printf("Visiting Shop...\n");
-			// shop function call karenge
+			visitShop(&p);
 		}
 		else if(choice == 3) {
 			printf("Player Stats:\n");
 			printf("Name: %s\n", p.name);
-			printf("Level: %d\n", p.level);
+			printf("Level: %.1f\n", p.level);
 			printf("HP: %d\n", p.hp);
 			printf("Attack: %d\n", p.attack);
 			printf("Gold: %d\n", p.gold);
 		}
 		else if(choice == 4) {
 			printf("Saving game...\n");
-			// saveGame() function call karenge
+			savegame(&p);
 		}
 		else if(choice == 5) {
-			printf("Exiting game...\n");
-			break; // loop se bahar
+			printf("enter 1 for gamesave and exit\n");
+			printf("enter 2 for only exit");
+			scanf("%d", &choice2);
+			if(choice2 == 1){
+				savegame(&p);
+				printf("Exiting game...\n");
+				return 0;
+			}
+			else{
+				printf("Exiting game...\n");
+				return 0;
+			}
 		}
 		else {
 			printf("Invalid choice! Try again.\n");
