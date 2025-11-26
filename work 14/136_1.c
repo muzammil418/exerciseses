@@ -15,13 +15,21 @@ int main() {
   }
 
   // Your code to find the length of the longest increasing subsequence goes here!
-   longest_sequence_length[0] = activation_codes[0];
-	int count = 1;
+   int longest_sequence_length = 0;
+	
 	for(int i = 0;i < code_count;i++){
-		for(int j = 1;j < code_count;j++){
-			
+		int count = 1;
+		for(int j = i + 1; j < code_count;j++){
+			if(activation_codes[j] > activation_codes[i]){
+				count++;
+			}
 		}
+		 if (count > longest_sequence_length) {
+            longest_sequence_length = count;
+        }
 	}
+//index: 0   1   2   3   4
+//value:20  30  20  4  50
 
   // Example output (replace with your logic)
   printf("Length of the longest valid activation code sequence: %d\n", longest_sequence_length);
