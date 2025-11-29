@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+Write a program in C to find the transpose of a given matrix.
+*/
+
 int main() {
     int arr1[10][10];
     int arr2[10][10];
