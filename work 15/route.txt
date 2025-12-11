@@ -1,0 +1,4 @@
+School Gate,07:15
+Playground,07:25
+Library,07:40
+River Bridge,07:55
