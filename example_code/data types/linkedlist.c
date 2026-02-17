@@ -38,11 +38,44 @@ void printList() {
     printf("NULL\n");
 }
 
+void removeFirst() {
+
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+
+    struct Node* temp = head;
+    head = head->next;
+    free(temp);
+}
+
+
+int length() {
+
+    int count = 0;
+    struct Node* temp = head;
+
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+
+    return count;
+}
+
+
 int main() {
 
     insert(10);
     insert(20);
     insert(30);
+
+    printList();
+	
+	printf("Length: %d\n", length());
+
+    removeFirst();
 
     printList();
 
