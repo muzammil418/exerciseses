@@ -38,19 +38,6 @@ void printList() {
     printf("NULL\n");
 }
 
-void removeFirst() {
-
-    if (head == NULL) {
-        printf("List is empty\n");
-        return;
-    }
-
-    struct Node* temp = head;
-    head = head->next;
-    free(temp);
-}
-
-
 int length() {
 
     int count = 0;
@@ -64,6 +51,70 @@ int length() {
     return count;
 }
 
+void find(int value){
+	struct Node* temp = head;
+	
+	while (temp != NULL){
+		if(temp->data == value){
+			printf("value %d is found\n", value);
+			return;
+		}
+		
+		temp = temp->next;
+	}
+	printf("value is not found\n");
+}
+
+void deleteNode(int value){
+	struct Node* temp = head;
+	struct Node* previous = NULL;
+	
+	while(temp != NULL){
+		if(temp->data == value){
+			
+			if(previous == NULL){
+				head = temp->next;
+			}
+			
+			else{
+				previous->next = temp->next;
+			}
+			
+			free(temp);
+            printf("value %d is removed\n", value);
+            return;
+		}
+		
+		previous = temp;
+		temp = temp->next;
+	}
+	
+	 printf("value is not found\n");
+ }
+ 
+ void insertend(int value){
+	  struct Node* newNode = malloc(sizeof(struct Node));
+    if(newNode == NULL){
+        printf("Memory allocation failed\n");
+        return;
+    }
+    newNode->data = value;
+    newNode->next = NULL;  
+
+    if(head == NULL){
+        head = newNode;
+        return;
+    }
+
+    int len = length();
+    struct Node* temp = head;
+
+    for(int i = 1; i < len; i++){
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+ }
 
 int main() {
 
@@ -75,10 +126,17 @@ int main() {
 	
 	printf("Length: %d\n", length());
 
-    removeFirst();
-
+	
     printList();
-
+	
+	find(10);
+	
+	deleteNode(20);
+	
+	insertend(80);
+	
+	printList();
+	
     return 0;
 }
 
