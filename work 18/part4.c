@@ -59,7 +59,7 @@ void enqueue(struct Node **head, struct Node **tail, int value) {
 
 int dequeue(struct Node **head) {
 	if(*head == NULL){
-		printf("stack is emty");
+		printf("queue is emty");
 		return 1;
 	}
 	
