@@ -50,6 +50,7 @@ int pop(struct Node **top) {
 	
 	*top = temp->next;
 	
+	free(temp);
 	return value;
 }
 

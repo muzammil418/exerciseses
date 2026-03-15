@@ -18,8 +18,8 @@ int main() {
     struct Node *head = NULL;
 
     append(&head, 10);
-    append(&head, 20);
-    append(&head, 30);
+	append(&head, 20);
+	append(&head, 30);
 
     printf("After append:\n");
     printList(head);
@@ -58,6 +58,7 @@ void append(struct Node **head, int value) {
 	if (*head == NULL){
 		*head = newnode;
 		
+		count++;
 		return;
 	}
 	
@@ -96,6 +97,7 @@ void deleteValue(struct Node **head, int value) {
 	if(temp->data == value){
 		*head = temp->next;
 		count--;
+		free(temp);
 		return;
 	}
 	else{
@@ -106,6 +108,7 @@ void deleteValue(struct Node **head, int value) {
 		if(temp->data == value){
 			pre->next = temp->next;
 			count--;
+			free(temp);
 			return;
 		}
 		else{
@@ -114,7 +117,8 @@ void deleteValue(struct Node **head, int value) {
 		}
 	}
 	 count--;
-	return;
+	 free(temp);
+	 return;
 }
 
 void printList(struct Node *head) {

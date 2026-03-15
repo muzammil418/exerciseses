@@ -63,5 +63,6 @@ int dequeue(struct Node **head) {
 	
 	*head = temp->next;
 	
+	free(temp);
 	return value;
 }
