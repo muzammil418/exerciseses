@@ -45,6 +45,11 @@ void push(struct Node **top, int value) {
 }
 
 int pop(struct Node **top) {
+	if(*top == NULL){
+		printf("stack is emty");
+		return 1;
+	}
+	
     struct Node *temp = *top;
 	int value = temp->data;
 	
@@ -55,6 +60,11 @@ int pop(struct Node **top) {
 }
 
 int peek(struct Node *top) {
+	if(top == NULL){
+		printf("stack is emty");
+		return 1;
+	}
+	
     struct  Node *temp = top;
 	
 	int value = temp->data;
