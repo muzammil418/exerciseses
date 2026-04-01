@@ -205,3 +205,9 @@ For each case, decide whether you would use:
 * a **doubly linked list**
 
 Explain **why your choice is the best**.
+
+Ans1. Playlist manager:  a double linked list is best because it support efficient traverse
+
+Ans2. log system:  a singly linked list is best because it allow fast insertation at the beginning 
+
+Ans3. dataset where random elements must be accessed quickly by index:  an array is best because it provides efficient random access
